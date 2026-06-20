@@ -65,7 +65,7 @@ Course 1: Introduction to Data Analytics (Foundations, Kaggle, Screener tools).
 Course 2: Preparing Business-Ready Data using Excel (Ribbons, basic formatting, conditional styling, filters, complex Logical/Lookup/Text formulas, Pivot maps. Case: Hotel bookings, Retail trends, interactive HR tracker).
 Course 3: SQL Masterclass (Relational schemas, queries, aggregation joins, window functions and CTEs. Case: Walmart Sales tracker, Zomato orders, OLA Cabs report).
 Course 4: Business Intelligence with Power BI (DAX modeling, reports, KPI indicators, custom vis. Case: Telecom churn, Blinkit quick-commerce analysis, expense charts).
-Course 5: AI with Analysis (Using ChatGPT, Perplexity, Google AI Studio, Julius, Claude for Exploratory analysis, Storytelling with custom prompts, SOLVE framework).
+Course 5: Agentic AI & Advanced AI Analytics (Using custom skills, plugins, APIs, and connectors to deploy autonomous Claude agents via Model Context Protocol (MCP); orchestrating self-healing data analytics pipelines).
 Course 6: Core Python Programming (syntax, files structure, loops. Projects: Seven Up Seven Down, Dice Rolling simulator).
 Course 7: Numerical Computing with NumPy (operations, broadcasting, slicing vectors).
 Course 8: Data Analysis with Pandas (DataFrames, Group-By, merging, cleaning up messy files. Projects: E-Commerce analyses, Employee salary tracks).

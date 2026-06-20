@@ -229,23 +229,24 @@ export const FVCI_CURRICULUM: Course[] = [
   },
   {
     id: 5,
-    title: "AI with Analysis",
-    subtitle: "The LLM Tech Wave of Data Science",
+    title: "Agentic AI & Advanced AI Analytics",
+    subtitle: "Claude Agents, Skills, Plugins, & API Connectors",
     questions: [
-      "How do LLM agents accelerate exploratory data analysis (EDA)?",
-      "Can we tailor prompts to generate clean, readable data stories?"
+      "How do we deploy autonomous Claude Agents to crawl, clean, and analyze enterprise databases?",
+      "How do custom agent skills, plugins, and API connectors bridge the gap between static LLMs and real-time execution?"
     ],
     study: [
-      "AI for Data-Driven Decision-Making inside tech corporations.",
-      "Prompt Engineering: Extracting clean tables during messy CSV parsing logs.",
-      "Data Detective: Exploratory analysis via natural prompt structures.",
-      "The SOLVE framework: Leveraging AI to solve complex, real-world business bottlenecks."
+      "Agentic AI Architecture: Understanding core loops, reasoning chains (ReAct), and autonomous planning systems.",
+      "Claude Agents & Model Context Protocol (MCP): Orchestrating multi-agent systems and custom Claude system instructions.",
+      "Agentic Skills & Capabilities: Implementing custom Python execution libraries, advanced vector searches, and specialized agent tools.",
+      "Plugins & Custom Connectors: Designing secure API endpoints, OAuth configurations, and data connectors (Slack, Google Workspace, Database APIs).",
+      "Human-in-the-Loop & Safety Guardrails: Establishing boundary parameters, cost limit buffers, and structured analytical evaluation."
     ],
     projects: [
-      "AI-Powered Competitor Analyzer: Automating competitive intelligence reports.",
-      "Dynamic Pitch Deck generator: Directing LLMs to craft elegant corporate slides."
+      "Claude Agent Market Research Analyst: An autonomous research agent equipped with custom search plugins, scraping skills, and report generation connectors.",
+      "Self-Healing Data Cleaning Agent: A custom python-execution agent that identifies, isolates, and repairs data schema anomalies automatically with feedback loops."
     ],
-    tools: ["Google AI Studio", "Claude", "ChatGPT", "Perplexity", "Copilot", "Julius AI"]
+    tools: ["Claude & Anthropic SDK", "LangChain / LangGraph", "Model Context Protocol (MCP)", "Google AI Studio", "Python API Connectors", "Custom Plugins"]
   },
   {
     id: 6,
