@@ -1,0 +1,6 @@
+{
+  "name": "FVCI Data Analytics & Agentic AI Landing Page",
+  "description": "High-conversion, Gen-Z flavored landing page for Future Vision Computer Institute's Certificate Program in Data Analytics & Agentic Coding, including an interactive AI agent builder and WhatsApp integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
