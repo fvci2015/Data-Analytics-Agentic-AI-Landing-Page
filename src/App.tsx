@@ -14,12 +14,58 @@ import {
   CheckCircle2, 
   HelpCircle, 
   Building2, 
-  ExternalLink 
+  ExternalLink,
+  Braces,
+  Sliders,
+  Bot,
+  FileCode,
+  Github,
+  Cpu,
+  BookOpen,
+  Globe,
+  LayoutGrid,
+  Layers
 } from "lucide-react";
 import AIAssistantSpecialist from "./components/AIAssistantSpecialist";
 import CurriculumViewer from "./components/CurriculumViewer";
 import MentorsGrid from "./components/MentorsGrid";
 import PastStudents from "./components/PastStudents";
+import CourseRoadmap from "./components/CourseRoadmap";
+import FeeSchedule from "./components/FeeSchedule";
+import WhatsAppCustomizer from "./components/WhatsAppCustomizer";
+
+const learningMilestones = [
+  {
+    icon: Terminal,
+    title: "Core Python Mastery",
+    description: "Build an absolute procedural footing. Master variables, operators, deep conditional flows, nested control loops, and custom function definitions."
+  },
+  {
+    icon: Braces,
+    title: "Complex Data Structures",
+    description: "Undergo rigorous training on collection types. Harness Lists, tuples, sets, nested dictionaries, and advanced data manipulation methodologies."
+  },
+  {
+    icon: FileCode,
+    title: "File Systems & Resiliency",
+    description: "Read, write, compile, and parse structured CSV and JSON datasets. Build bulletproof exception systems using try-except-finally blocks."
+  },
+  {
+    icon: Sliders,
+    title: "Interactive Web Interfaces",
+    description: "Convert raw analytical code scripts into full-scale, responsive streamable data dashboards using Streamlit layout widgets and session state cache keys."
+  },
+  {
+    icon: Database,
+    title: "Full-Stack Web Backends",
+    description: "Construct scalable web application portals using Flask servers, managing template render hierarchies, system routes, and custom API requests."
+  },
+  {
+    icon: Bot,
+    title: "Autonomous AI Agents",
+    description: "Deploy advanced cognitive architectures using CrewAI, LangGraph, and LangChain. Master tools customisations, graph loops, and task delegation."
+  }
+];
 
 export default function App() {
   const [selectedLocation, setSelectedLocation] = useState<string>("All");
@@ -97,6 +143,7 @@ export default function App() {
           <nav className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-wider font-bold">
             <a href="#agentic-coding-sandbox" className="text-slate-600 hover:text-brand-accent transition-colors">Playground</a>
             <a href="#curriculum-breakdown" className="text-slate-600 hover:text-brand-accent transition-colors">Syllabus</a>
+            <a href="#program-fee-schedule" className="text-slate-600 hover:text-brand-accent transition-colors">Fees</a>
             <a href="#success-placement" className="text-slate-600 hover:text-brand-accent transition-colors">Placed</a>
             <a href="#locations-sector" className="text-slate-600 hover:text-brand-accent transition-colors">Centers</a>
           </nav>
@@ -186,61 +233,113 @@ export default function App() {
           </div>
         </section>
 
-        {/* Section 2: Agentic Coding Sandbox Component */}
-        <section id="agentic-coding-sandbox" className="scroll-mt-24">
-          <AIAssistantSpecialist />
+        {/* Section: What You'll Learn - Milestones Grid */}
+        <section id="program-learning-highlights" className="scroll-mt-24 py-6">
+          <div className="text-left mb-12">
+            <span className="text-[11px] font-extrabold tracking-[0.2em] text-[#123B73] uppercase block mb-2">
+              WHY CHOOSE THIS PROGRAM?
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+              What you'll learn-From Prompts to Prototypes
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {learningMilestones.map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div 
+                  key={index} 
+                  className="bg-white border border-slate-200/60 rounded-3xl p-8 hover:shadow-[0_20px_40px_-15px_rgba(18,59,115,0.06)] hover:border-slate-300 transition-all duration-300 flex flex-col items-start text-left group"
+                >
+                  <div className="bg-[#eff6ff] border border-[#e0f1fe] p-3.5 rounded-2xl mb-6 text-[#123B73] group-hover:scale-105 transition-all duration-300">
+                    <IconComponent className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-extrabold text-slate-900 mb-3 tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-slate-500 leading-relaxed font-normal">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </section>
 
-        {/* Section 3: Detailed Syllabus Curriculum */}
+        {/* Section: Course Journey Roadmap (22 Weeks) */}
+        <CourseRoadmap />
+
+        {/* Section 2: Detailed Syllabus Curriculum */}
         <section id="curriculum-breakdown" className="scroll-mt-24">
           <CurriculumViewer />
         </section>
 
-        {/* Section 5: Course Tools Grid Showcase */}
+        {/* Section 3: Agentic Coding Sandbox Component */}
+        <section id="agentic-coding-sandbox" className="scroll-mt-24">
+          <AIAssistantSpecialist />
+        </section>
+
+        {/* Section 5: Official Course Tool Stack */}
         <section id="tools-showcase" className="py-16 bg-white rounded-3xl border border-slate-200 p-6 md:p-10 shadow-sm relative overflow-hidden">
-          <div className="text-center mb-10">
-            <span className="text-xs font-mono font-bold tracking-[0.2em] text-brand-accent uppercase flex items-center justify-center gap-1">
-              <Database className="w-3.5 h-3.5 text-brand-accent" />
-              INTELLIGENT TOOLSTACK
-            </span>
-            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mt-2">
-              Next-Gen Toolchains Covered 🛠️
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight uppercase italic font-black">
+              OFFICIAL COURSE TOOL STACK
             </h2>
-            <p className="text-slate-600 text-xs md:text-sm mt-2 max-w-md mx-auto">
-              Skip boring boilerplate setup. Master the professional analyst ecosystem expected by top digital enterprises.
+            <p className="text-slate-500 text-sm md:text-base mt-2.5 max-w-xl mx-auto font-medium">
+              Hands-on training strictly focused on industry-standard platforms, APIs, and databases.
             </p>
           </div>
 
-          {/* Tools Grid layout */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {[
-              { name: "Power BI", desc: "Interactive KPIs & DAX", group: "Dashboarding" },
-              { name: "Advanced Excel", desc: "Formulas & Pivot Maps", group: "Basics" },
-              { name: "MySQL", desc: "Relational Queries & Joins", group: "Databases" },
-              { name: "Python 3", desc: "Code Optimization", group: "Programming" },
-              { name: "Pandas", desc: "Dirty CSV Cleansing", group: "Data Science" },
-              { name: "NumPy", desc: "Algebra Vector arrays", group: "Math" },
-              { name: "Matplotlib", desc: "Line Plot Annotations", group: "Plotting" },
-              { name: "Seaborn", desc: "Correlation Heatmaps", group: "Statistics" },
-              { name: "Claude", desc: "Advanced AI Workspace", group: "AI Engines" },
-              { name: "Google NotebookLM", desc: "AI Document Research", group: "AI Research" },
-              { name: "Google AI Studio", desc: "Prompt Engineering", group: "AI Engines" },
-              { name: "Kaggle", desc: "Sourcing Public S.M.A.R.T sets", group: "Open Data" }
-            ].map((tool, idx) => (
-              <div 
-                id={`tech-tool-${idx}`}
-                key={idx} 
-                className="bg-slate-50/75 p-5 rounded-2xl border border-slate-200/80 flex flex-col justify-between hover:border-brand-accent/40 hover:bg-white hover:shadow-md transition-all duration-300 group cursor-default"
-              >
-                <div>
-                  <span className="text-[8px] font-mono font-bold tracking-wider text-brand-accent bg-brand-accent/10 border border-brand-accent/20 px-2 py-0.5 rounded uppercase">
-                    {tool.group}
-                  </span>
-                  <h4 className="text-sm font-bold text-slate-800 mt-3.5 group-hover:text-brand-accent transition-colors">{tool.name}</h4>
-                  <p className="text-[10px] text-slate-500 mt-1 leading-normal">{tool.desc}</p>
-                </div>
-              </div>
-            ))}
+          {/* Tools Flow layout */}
+          <div className="max-w-5xl mx-auto flex flex-col gap-4 items-center">
+            {/* Row 1 / First Batch of tools */}
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full">
+              {[
+                { name: "Python", icon: Terminal, textColor: "text-blue-600/90", bgColor: "bg-blue-50/60", borderColor: "border-blue-100" },
+                { name: "GitHub", icon: Github, textColor: "text-slate-800/90", bgColor: "bg-slate-50/60", borderColor: "border-slate-200/70" },
+                { name: "Google Colab", icon: Layers, textColor: "text-amber-600/90", bgColor: "bg-amber-50/60", borderColor: "border-amber-100" },
+                { name: "Streamlit", icon: LayoutGrid, textColor: "text-rose-500/90", bgColor: "bg-rose-50/60", borderColor: "border-rose-100" },
+                { name: "Flask", icon: Globe, textColor: "text-slate-600/90", bgColor: "bg-slate-50/60", borderColor: "border-slate-100" },
+                { name: "MySQL", icon: Database, textColor: "text-sky-600/90", bgColor: "bg-sky-50/60", borderColor: "border-sky-100" },
+                { name: "OpenAI", icon: Sparkles, textColor: "text-emerald-600/90", bgColor: "bg-emerald-50/60", borderColor: "border-emerald-100" }
+              ].map((tool, idx) => {
+                const IconComponent = tool.icon;
+                return (
+                  <div 
+                    key={idx} 
+                    className="bg-white border border-slate-200/90 hover:border-slate-300 rounded-xl px-5 py-3 shadow-[0_1px_3px_rgba(0,0,0,0.02)] inline-flex items-center gap-3 text-slate-800 font-bold text-sm tracking-tight hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-default"
+                  >
+                    <div className={`${tool.bgColor} ${tool.textColor} ${tool.borderColor} border p-1.5 rounded-lg flex items-center justify-center`}>
+                      <IconComponent className="w-4 h-4" />
+                    </div>
+                    <span>{tool.name}</span>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Row 2 / Second Batch of tools */}
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full">
+              {[
+                { name: "Anthropic / Claude", icon: Bot, textColor: "text-orange-600/90", bgColor: "bg-orange-50/60", borderColor: "border-orange-100" },
+                { name: "Google AI Studio", icon: Cpu, textColor: "text-indigo-600/90", bgColor: "bg-indigo-50/60", borderColor: "border-indigo-100" },
+                { name: "Google NotebookLM", icon: BookOpen, textColor: "text-violet-600/90", bgColor: "bg-violet-50/60", borderColor: "border-violet-100" }
+              ].map((tool, idx) => {
+                const IconComponent = tool.icon;
+                return (
+                  <div 
+                    key={idx} 
+                    className="bg-white border border-slate-200/90 hover:border-slate-300 rounded-xl px-5 py-3 shadow-[0_1px_3px_rgba(0,0,0,0.02)] inline-flex items-center gap-3 text-slate-800 font-bold text-sm tracking-tight hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-default"
+                  >
+                    <div className={`${tool.bgColor} ${tool.textColor} ${tool.borderColor} border p-1.5 rounded-lg flex items-center justify-center`}>
+                      <IconComponent className="w-4 h-4" />
+                    </div>
+                    <span>{tool.name}</span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
@@ -289,6 +388,12 @@ export default function App() {
         <section id="expert-mentorship-grid" className="scroll-mt-24">
           <MentorsGrid />
         </section>
+
+        {/* Section: Program Fee Schedule */}
+        <FeeSchedule />
+
+        {/* Section: WhatsApp Interactive Prompt customizer */}
+        <WhatsAppCustomizer />
 
         {/* Section 9: Estd 2006 & Surat locations section */}
         <section id="locations-sector" className="scroll-mt-24 py-16 bg-white rounded-3xl border border-slate-200 p-6 md:p-10 relative overflow-hidden shadow-sm">

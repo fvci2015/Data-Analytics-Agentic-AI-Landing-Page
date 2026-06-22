@@ -387,6 +387,18 @@ export default function CurriculumViewer() {
   const [activeId, setActiveId] = useState<number>(2); // Start open with Course 2 (Excel) for visual value
   const [projectSearch, setProjectSearch] = useState<string>("");
 
+  React.useEffect(() => {
+    const handleOpenCourse = (e: any) => {
+      if (e.detail && typeof e.detail.courseId === "number") {
+        setActiveId(e.detail.courseId);
+      }
+    };
+    window.addEventListener("open-curriculum-course" as any, handleOpenCourse);
+    return () => {
+      window.removeEventListener("open-curriculum-course" as any, handleOpenCourse);
+    };
+  }, []);
+
   return (
     <div id="curriculum-timeline" className="py-16 bg-white rounded-3xl border border-slate-200 p-6 md:p-10 shadow-sm">
       
